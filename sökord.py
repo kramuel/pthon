@@ -73,17 +73,14 @@ def check_dia2(pos):
     return string
 
 
-# check horison
+# check horisontell
 H_string = ""
 for line in horison_lines:
     H_string += line
 
 print_if_find(H_string, "H")
-
-# horisont reverse
-H_stringR = H_string[::-1]
-
-print_if_find(H_stringR, "HR")
+# reverse
+print_if_find(H_string[::-1], "HR")
 
 # check vertical
 V_string = ""
@@ -91,13 +88,9 @@ for i in range(len(horison_lines)):
     for word in horison_lines:
         V_string += word[i]
 
-
 print_if_find(V_string, "V")
-
-# check vertical reverse
-V_stringR = V_string[::-1]
-
-print_if_find(V_stringR, "VR")
+# reverse
+print_if_find(V_string[::-1], "VR")
 
 
 # check diagonally(from top-L to bot-R)
@@ -113,7 +106,6 @@ print_if_find(D_string, "D")
 D2_string = ""
 for pos in topR_downL_diag:
     D2_string += check_dia2(pos)
-
 
 print_if_find(D2_string, "D2")
 
